@@ -1,0 +1,29 @@
+<div id="newcar" class="tab_content">
+    <ul class="news2">
+        <li ng-repeat="row in tabCtrl.lists | limitTo:3">
+            <a href="#/detail/{{row.id}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>
+                <div class="image"><img src="{{row.thumb}}"></div>
+                <div class="n2">
+                    <span class="fb">{{row.subject}}</span><br>
+                    <span class="fc_gray fn crop">{{row.content}}</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="news2">
+        <li ng-repeat="row in tabCtrl.lists.slice(3,6)">
+            <a href="#/detail/{{row.id}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>
+                <div class="image"><img src="{{row.thumb}}"></div>
+                <div class="n2">
+                    <span class="fb">{{row.subject}}</span><br>
+                    <span class="fc_gray fn crop">{{row.content}}</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="news3 lists">
+        <li>
+            <p ng-repeat="row in tabCtrl.lists.slice(6,15)" data-ng-class="{ 'padding-top' : !$first && $index % 3 == 0 }"><a href="#/detail/{{row.id}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>{{row.subject}}</a></p>
+        </li>
+    </ul>
+</div>

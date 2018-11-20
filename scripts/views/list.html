@@ -1,0 +1,51 @@
+<h3 class="subtitle">{{ listCtrl.sectionname }}</h3>
+
+<!---VOD Large---->
+<div class="thumBox">
+    <article>
+        <ul class="section__top-feature">
+            <li class="thumbnail thumbnail-small" ng-repeat="row in listCtrl.lists | limitTo:4">
+                <a href="#/detail/{{row.id}}">
+                    <div class="section__top-feature--thumb-frame"><img src="{{row.thumb}}" title="샘플이미지"></div>
+                    <p class="thumbnail-caption font-size11">{{row.subject}}</p>
+                    <span>{{row.writedtm}}</span>
+                </a>
+            </li>
+        </ul>
+    </article>
+</div>
+<!---//VOD Large---->
+
+<!-- 크리테오 섹션 중단 배너 --><iframe src="scripts/views/ads/adSectionMiddle.html" width="728" height="90" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" style="display: block;margin:0 auto 20px auto;"></iframe>
+
+<!---VOD Small---->
+<div class="articleBox">
+    <ul>
+    	<li ng-repeat="row in listCtrl.lists" ng-if="$index > 3">
+            <a href="#/detail/{{row.id}}">
+                <div class="articleBox__thumb-frame"><img src="{{row.thumb}}" alt="{{row.subject}}"></div>
+                <h4>{{row.subject}}</h4>
+                <p class="font-size11">{{row.content}}</p>
+                <span>{{row.writedtm}}</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!---//VOD Small---->
+<!-- Pagination -->
+<div class="pagination" ng-bind-html="renderHtml(listCtrl.pagelist)"></div>
+<!-- Pagination Template Source
+<ul class="pagination mB20">
+    <li class="first-page"><a>«</a></li>
+    <li><a>‹</a></li>
+    <li><a class="currentPage">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">›</a></li>
+    <li class="last-page"><a href="#">»</a></li>
+</ul>-->
+<!-- //pagination -->

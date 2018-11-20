@@ -1,0 +1,71 @@
+<!-- 메인 상단 자동차 블럭 -->
+<div class="thumBox">
+    <article>
+        <!-- <a href="#/detail/{{row.id}}" class="thumbnail thumbnail-medium" ng-repeat="row in featureCtrl.features | limitTo: featureCtrl.limitCount">
+            <img src="{{row.thumb}}" alt="샘플이미지">
+            <p class="thumbnail-caption" style="text-align:left;">{{row.subject}}</p>
+            <p class="thumbnail-number">조회수 {{row.viewsCnt}}회</p>
+            <img src="/images/icon/icon_hit.png" alt="히트" class="hitBtn">
+        </a> -->
+        
+        <ul class="top__feature">
+            <li class="thumbnail thumbnail-medium" ng-repeat="row in mainCtrl.features | limitTo: mainCtrl.limitCount">
+                <a href="#/detail/{{row.id}}">
+                    <img src="{{row.thumb}}" alt="샘플이미지">
+                    <p class="thumbnail-caption">{{row.subject}}</p>
+                    <span>{{row.writedtm}}</span>
+                </a>
+            </li>
+        </ul>
+
+    </article>
+</div>
+<!-- /메인 상단 자동차 블럭 -->
+
+<!-- 카테고리 -->
+<div class="uio-sort-result">
+    <h2>실시간 이슈</h2>
+</div>
+<!-- //카테고리 -->
+<!---VOD Small---->
+<div class="thumBox">
+    <article>
+        <a href="#/detail/{{row.id}}" class="thumbnail thumbnail-small" ng-repeat="row in mainCtrl.issues">
+            <img src="{{row.thumb}}" alt="{{row.subject}}">
+            <p class="thumbnail-caption">{{row.subject}}</p>
+            <!-- <p class="thumbnail-number">조회수 {{row.viewsCnt}}회</p> -->
+        </a>
+    </article>
+</div>
+<!---//VOD Small---->
+
+<!-- 크리테오 섹션 중단 배너 --><iframe src="scripts/views/ads/adSectionMiddle.html" width="728" height="90" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" style="display: block;margin:0 auto 20px auto;"></iframe>
+
+<div class="mainArea">
+    <article>
+    	<!-- 기사리스트 -->
+        <div class="articleArea">
+       		<a href="#/detail/{{row.id}}" ng-repeat="row in mainCtrl.lists | limitTo:7">
+	       		<!-- 섬네일 이미지 영역 -->
+	       		<div class="main-article__thumb-frame">
+	       			<img src="{{row.thumb}}" alt="샘플이미지">
+	       		</div>
+	       		<!-- 제목 역역 -->
+                <h4 class="font-size15">{{row.subject}}</h4>
+	       		<!-- 내용 영역 -->
+                <p class="font-size11">{{row.content}}</p>
+	       		<!-- 작성일 영역 -->
+                <span>{{row.writedtm}}</span>
+       		</a>
+        </div>
+        <!-- /기사리스트 -->
+        <!-- 시승기.리뷰 -->
+        <div class="reviewArea" ng-controller="ReviewController as reviewCtrl">
+            <h3>시승기&middot;리뷰 <a href="#/list/S1N4">+더보기</a></h3>
+            <ul>
+                <li ng-repeat="row in reviewCtrl.reviews"><a href="#/detail/{{row.id}}"  class="thumbnail thumbnail-small"><img src="{{row.thumb}}" title="샘플이미지"><p class="thumbnail-caption"style="text-align:left;">{{row.subject}}</p></a></li>
+            </ul>
+        </div>
+        <!-- /시승기.리뷰 -->
+    </article>
+</div>

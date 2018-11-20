@@ -1,0 +1,29 @@
+<div id="main" class="tab_content" ng-controller="MainController as mainCtrl">
+    <ul class="news1">
+        <li ng-repeat="row in mainCtrl.features | limitTo:1" data-ng-show="$first">
+            <a href="#/detail/{{row.id}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>
+                <div class="image"><img ng-src="{{row.thumb}}"></div>
+                <div class="n2">
+                    <span class="fb">{{row.subject}}</span><br>
+                    <span class="fc_gray fn crop">{{row.content}}</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="news2">
+        <li ng-repeat="row in mainCtrl.features | limitTo:4" data-ng-show="!$first">
+            <a href="#/detail/{{row.id}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>
+                <div class="image"><img ng-src="{{row.thumb}}"></div>
+                <div class="n2">
+                    <span class="fb">{{row.subject}}</span><br>
+                    <span class="fc_gray fn crop">{{row.content}}</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="news3" ng-controller="FavoriteController as favoriteCtrl">
+        <li>
+            <p ng-repeat="row in favoriteCtrl.favorites | limitTo:9" data-ng-class="{ 'padding-top' : !$first && $index % 3 == 0 }"><a href="#/detail/{{row.id}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>{{row.subject}}</a></p>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,230 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#news {
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#news ul.tabs1 li {
+    position: static;
+    height: auto;
+}
+
+#news ul.tabs1 li a.active {
+    color: #000;
+}
+
+#news .tab_content {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    width: 100%;
+}
+
+#news .tabs1 .tab_content li {
+    border: 0;
+}
+
+#news .tab_content ul.news1 {
+    width: 365px;
+}
+
+#news ul.tabs1 li li {
+    margin: 0;
+    border: 0;
+    line-height: 1;
+}
+
+#news ul.news1 li {
+    padding: 0;
+}
+
+#news ul.news1 .n2, #news ul.news1 .fb {
+    line-height: 1.75;
+}
+
+#news ul.news1 li .image {
+    width: 345px;
+    height: 165px;
+    overflow: hidden;
+}
+#news ul.news1 li img {
+    width: 100%;
+    height: auto;
+}
+
+#news .tab_content ul li a {
+    padding: 10px 0 10px 15px;
+}
+
+#news .tab_content ul li a:hover {
+    background-color: transparent;
+    color: #2293e3;
+    /*text-decoration: underline;*/
+}
+
+#news ul.news2 li,
+#news ul.news2 li:nth-child(1) {
+    padding: 10px 12px 0;
+}
+
+#news ul.news2 li a {
+    padding: 0;
+    height: 65px;
+}
+
+#news ul.news2 li .image {
+    display: inline-block;
+    width: 100px;
+    height: 65px;
+    overflow: hidden;
+}
+
+#news ul.news2 li img {
+    width: 100%;
+    height: 100%;
+}
+
+#news ul.news2 li .n2 {
+    display: inline-block;
+    margin-left: 10px;
+    width: 189px;
+}
+
+#news ul.news2 li .n2 .fb {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+#news ul.news2 .crop {
+    height: auto;
+}
+
+#news ul.news3 {
+    border-left: 0;
+}
+
+#news ul.news3.lists li p {
+    width: 315px;
+}
+
+#news .tab_content ul.news3 li a {
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333;
+}
+
+#news .tab_content ul.news3 .padding-top {
+    padding-top: 10px;
+}
+
+.widjet__container, .widjet__container > * {
+    box-sizing: border-box;
+}
+
+.widjet__container {
+    width: 493px;
+    height: 342px;
+    border: 1px solid #d6d6d6;
+    background-color: #fff;
+}
+
+.widjet__container .header__title {
+    position: relative;
+    height: 40px;
+    padding: 20px;
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #f7f7f7;
+}
+
+.widjet__container .header__title > img,
+.widjet__container .header__title > a {
+    position: absolute;
+    top: 50%;
+    margin-top: -7.5px;
+}
+.widjet__container .header__title > a {
+    right: 20px;
+}
+
+.widjet__container .header__title--more {
+    font-size: 12px;
+}
+
+.widjet__container .section-upper ,
+.widjet__container .section-below {
+    padding: 20px;
+}
+
+.widjet__container .section-upper {
+    height: 165px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.widjet__container .section-upper__article {
+    display: inline-block;
+    width: 143px;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.widjet__container .section-upper__article:first-child {
+    margin-left: 0;
+}
+
+.widjet__container .section-upper__article h4 {
+    margin-top: 5px;
+    height: 38px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.widjet__container .section-upper__image--wrapper {
+    width: 145px;
+    height: 90px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #d6d6d6;
+}
+
+.widjet__container .section-upper__image--wrapper img {
+    max-width: 100%;
+}
+
+.widjet__container .section-below__wrapper {
+    display: inline-block;
+    width: 290px;
+    vertical-align: top;
+}
+
+.widjet__container .section-below__image--wrapper {
+    margin-right: 10px;
+    width: 145px;
+    height: 90px;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #d6d6d6;
+}
+
+.widjet__container .section-below__image--wrapper img {
+    max-width: 100%;
+}
+
+.widjet__container .section-below__article {
+    line-height: 1.55;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

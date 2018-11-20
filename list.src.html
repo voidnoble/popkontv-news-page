@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <base href="http://27.102.93.203:9001/" target="_blank">
+
+    <title>list</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="/images/common/icon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style2.css" />
+    <link rel="stylesheet" type="text/css" href="/js/plugin/tip-yellowsimple/tip-yellowsimple.css"  />
+    <link rel="stylesheet" type="text/css" href="/js/plugin/tip-twitter/tip-twitter.css"  />
+    <script type="text/javascript" src="/js/plugin/plugin.min.js"></script>
+    <script type="text/javascript" src="/js/default.js"></script>
+    <style>
+        .articleBox{border:1px solid #ddd;background:#fff; margin-top:10px;}
+        .articleBox .articleTb{margin:10px 0px 10px 10px;}
+        .articleBox .articleTb tr td img{width:100px;height:60px;}
+        .articleBox .articleTb tr td:last-chlid{margin-left:50px;}
+        .articleBox .articleTb tr td:last-chlid	a{font-weight:bold;font-size:14px;}
+        .articleContent{font-size:10px;margin-top:2px;}
+        .regDttm{font-size:10px;margin-top:2px;margin-left:550px;color:blue;}
+    </style>
+</head>
+
+<body>
+<div id="wrapper">
+    <!-- header -->
+    <div class="header">
+        <div class="top_Bg">
+            <div class="topMenu">
+                <span><a href="/sign/sign_form.asp">로그인</a></span>
+                <span><a href="/join/join_agree.asp">회원가입</a></span>
+                <span><a href="/private/find_id.asp">아이디/비번찾기</a></span>
+            </div>
+        </div>
+        <div class="middle_Bg">
+            <div class="middleMenu">
+                <div class="logo"><a href="/default.asp"><img src="/images/common/siteLogo.png" alt="로고"></a></div>
+                <nav>
+                    <ul class="primary-nav">
+                        <li class="on"><a href="/castRank/rank_total.asp">Live</a></li>
+                        <li><a href="/content/ucc/main.asp">영화</a></li>
+                        <li><a href="/content/news/news.asp">News</a></li>
+                        <li><a href="/content/ucc/main.asp">UCC</a></li>
+                        <li><a href="/content/webtoon/main.asp">웹툰</a></li>
+                        <li><a href="/content/kids/main.asp">키즈</a></li>
+                        <li><a href="/content/edu/main.asp">에듀</a></li>
+                        <li><a href="/content/fortune/fortune_Tojung.asp">운세</a></li>
+                    </ul>
+                    <ul class="primary-smenu">
+                        <li><a href="/coin/coin_main.asp">팝콘충전</a></li>
+                        <li><a href="/item/item_fullView.asp">아이템구매</a></li>
+                        <li><a href="/customer/notice_list.asp">고객센터</a></li>
+                        <li><a href="/event/event_mcRank.asp">이벤트</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="bottom_Bg">
+            <div class="bottomMenu">
+                <p class="location"> &gt; <a href="#">이벤트</a> &gt;<strong>이벤트MC 순위</strong></p>
+                <!-- 검색 -->
+                <div class="searchbox_wrap">
+                    <form name="frm_schMem" id="frm_schMem" method="post" action="/castRank/rank_total.asp">
+                        <input type="hidden" id="searchType" name="searchType" value="0">
+                        <input type="text" id="searchStr" name="searchStr" maxlength="8" class="i_text" placeholder="검색할 MC의 닉네임" title="MC 닉네임을 2~8자 이내로 입력하세요.">
+                        <div class="i_smit" id="btn_schMem"><span class="hide">검색</span></div>
+                    </form>
+                </div>
+                <!-- //검색 -->
+            </div>
+        </div>
+    </div>
+    <!-- //header -->
+    <div id="container">
+        <div id="content">
+            <div class="section">
+                <div class="sub_line_wrap">
+                    <h2 class="cont_sbj">자동차</h2>
+                    <h3 class="cont_sbs">국내외 자동차 뉴스 및 시승기 전문 미디어 회사 뉴스 채널입니다.</h3>
+                </div>
+
+                <!---VOD Large---->
+                <div class="thumBox">
+                    <article ng-repeat="row in record.row">
+                        <a href="{{row.url}}"  class="thumbnail thumbnail-small">
+                            <img src="{{row.thumb}}" title="샘플이미지">
+                            <p class="thumbnail-caption">{{row.subject}}</p>
+                            <p class="thumbnail-number">조회수 {{row.viewsCnt}}회</p>
+                        </a>
+                        <a href="{{row.url}}"  class="thumbnail thumbnail-small">
+                            <img src="{{row.thumb}}" title="샘플이미지">
+                            <p class="thumbnail-caption">{{row.subject}}</p>
+                            <p class="thumbnail-number">조회수 {{row.viewsCnt}}회</p>
+                        </a>
+                        <a href="{{row.url}}"  class="thumbnail thumbnail-small">
+                            <img src="{{row.thumb}}" title="샘플이미지">
+                            <p class="thumbnail-caption">{{row.subject}}</p>
+                            <p class="thumbnail-number">조회수 {{row.viewsCnt}}회</p>
+                        </a>
+                        <a href="{{row.url}}"  class="thumbnail thumbnail-small">
+                            <img src="{{row.thumb}}" title="샘플이미지">
+                            <p class="thumbnail-caption">{{row.subject}}</p>
+                            <p class="thumbnail-number">조회수 {{row.viewsCnt}}회</p>
+                        </a>
+                    </article>
+                </div>
+                <!---//VOD Large---->
+                <!---VOD Small---->
+                <div class="articleBox" ng-repeat="row in record.row">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}.</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="articleBox">
+                    <table class="articleTb">
+                        <tr>
+                            <td><img src="{{row.thumb}}"></td>
+                            <td>
+                                <a href="{{row.url}}">{{row.subject}}</a>
+                                <div class="articleContent">{{row.content}}</div>
+                                <div class="regDttm">2015.04.09</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!---//VOD Small---->
+                <!-- pagination -->
+                <ul class="pagination mB20">
+                    <li class="first-page"><a>«</a></li>
+                    <li><a>‹</a></li>
+                    <li><a class="currentPage">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">›</a></li>
+                    <li class="last-page"><a href="#">»</a></li>
+                </ul>
+                <!-- //pagination -->
+            </div><!-- //section -->
+            <!-- sideMenu -->
+            <div class="aside">
+                <div class="cate_menu_wrap">
+                    <div class="cate_menu">
+                        <ul>
+                            <li><a href="#">최신뉴스<span class="arrow_icon icon_cate"></span></a></li>
+                            <li><a href="#">신차<span class="arrow_icon icon_cate"></span></a></li>
+                            <li><a href="#">시승기.리뷰<span class="arrow_icon icon_cate"></span></a></li>
+                            <li><a href="#">업계.정책<span class="arrow_icon icon_cate"></span></a></li>
+                            <li><a href="#">칼럼.분석<span class="arrow_icon icon_cate"></span></a></li>
+                            <li><a href="#">라이프<span class="arrow_icon icon_cate"></span></a></li>
+                            <li><a href="#">결함.분석<span class="arrow_icon icon_cate"></span></a></li>
+                            <li><a href="#">회사쇼<span class="arrow_icon icon_cate"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="Ctxt mB20" style="border:1px solid #ddd;width:210px;height:210px;margin:13px 13px 13px 13px">
+                    <p style="font-weight:bold;float:left;margin:15px 0px 0px 15px;">시승기.리뷰</p>
+                    <a href="#"  class="thumbnail thumbnail-small" style="margin-top:15px;">
+                        <img src="/images/test/sample_06.png" title="샘플이미지">
+                        <p class="thumbnail-caption">{{row.subject}}</p>
+                        <p class="thumbnail-number">조회수 {{row.viewsCnt}}회</p>
+                        <img src="/images/icon/play_overlay.png" title="play" class="playBtn">
+                    </a>
+                </div>
+                <div class="rank_ol mB20">
+                    <h2>가장 많이본 뉴스</h2>
+                    <ol>
+                        <li class="best" ng-repeat="row in record.row"><span class="ranking">1</span><a href="#">{{row.subject}}</a></li>
+                        <li class="best"><span class="ranking">2</span><a href="#">{{row.subject}}</a></li>
+                        <li class="best"><span class="ranking">3</span><a href="#">{{row.subject}}</a></li>
+                        <li ><span class="ranking">4</span><a href="#">{{row.subject}}</a></li>
+                        <li ><span class="ranking">5</span><a href="#">{{row.subject}}</a></li>
+                        <li ><span class="ranking">6</span><a href="#">{{row.subject}}</a></li>
+                        <li ><span class="ranking">7</span><a href="#">{{row.subject}}</a></li>
+                        <li ><span class="ranking">8</span><a href="#">{{row.subject}}</a></li>
+                        <li ><span class="ranking">9</span><a href="#">{{row.subject}}</a></li>
+                        <li ><span class="ranking">10</span><a href="#">{{row.subject}}</a></li>
+                    </ol>
+                    <a class="more" href="#">+더보기</a>
+                </div>
+
+                <div class="info_ul">
+                    <h2>공지사항</h2>
+                    <ul>
+                        <li><a href="#">- @@@ 모바일APP 시청하기 ...</a></li>
+                        <li><a href="#">- [필독]팝콘TV 무료충전소 서버점검...</a></li>
+                        <li><a href="#">- @@@ 모바일APP 시청하기 ...</a></li>
+                        <li><a href="#">- @@@ 모바일APP 시청하기 ...</a></li>
+                        <li><a href="#">- @@@ 모바일APP 시청하기 ...</a></li>
+                        <li><a href="#">- [필독]팝콘TV 무료충전소 서버점검...</a></li>
+                        <li><a href="#">- [필독]팝콘TV 무료충전소 서버점검...</a></li>
+                        <li><a href="#">- @@@ 모바일APP 시청하기 ...</a></li>
+                        <li><a href="#">- @@@ 모바일APP 시청하기 ...</a></li>
+                        <li><a href="#">- [필독]팝콘TV 무료충전소 서버점검...</a></li>
+                    </ul>
+                    <a class="more" href="#">+더보기</a>
+                </div>
+
+            </div>
+            <!-- //sideMenu -->
+        </div>
+
+    </div><!-- container -->
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer_comm">
+            <a href="/info/serviceUse.asp" class="link_info">이용약관</a>
+            <a href="/info/privacy.asp" class="link_info">개인정보취급방침</a>
+            <a href="/info/youthpolicy.asp" class="link_info">청소년보호정책</a>
+            <a href="/info/watch.asp" class="link_info">시청기준안내</a>
+            <a href="/info/broadcasting.asp" class="link_info">방송기준안내</a>
+        </div>
+        <div class="copyright">
+            <p class="desc_copyright">사업자등록번호 105-86-91305 | 통신판매업신고번호 2013-서울강남-00971호 | 별정통신사업번호 제110763호<br>
+                대표이사 김대권 | 서울특별시 강남구 테헤란로2길 36, 320 ㅣ 주식회사 홍연 l 과금관련 문의 : 02-702-5440</p>
+            <address class="txt_copyright">Copyright ⓒHongyeon. All Rights reserved.</address>
+        </div>
+    </div>
+    <!--SA:203 / PC:P-00001 / MC:00001 / CC:00001 / RA:222.110.158.59 / SN:27.102.93.203 / -->
+    <!-- //Footer -->
+
+</div><!-- //wrapper -->
+</body>
+</html>

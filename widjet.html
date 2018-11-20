@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="app">
+<head>
+    <title>팝콘TV 자동차 - 회사</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <link rel="shortcut icon" href="http://www.yourdomain.com/image2006/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.popkontv.com/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.popkontv.com/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.popkontv.com/js/plugin/tip-yellowsimple/tip-yellowsimple.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.popkontv.com/js/plugin/tip-twitter/tip-twitter.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://www.popkontv.com/css/liScroll.css" />
+    <link rel="stylesheet" type="text/css" href="css/widjet.css" />
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container widjet__container" ng-controller="WidjetController as widjetCtrl">
+
+        <h3 class="header__title">
+            <img src="http://cms.yourdomain.com/assets/images/popkontv-widjet__yourdomain-logo.gif" width="172" height="15" alt="회사 로고" />
+            <a href="#/news/car/" title="자동차 뉴스 전체보기" class="header__title--more" ng-click='page.postUrlToParent("/news/car/")'>전체보기 <i class="fa fa-caret-right mL5 mR5" style="color:#fd9e38;"></i></a>
+        </h3>
+
+        <div class="row section-upper">
+            <ul class="section-upper__wrapper">
+                <li class="col-lg-4 section-upper__article" ng-repeat="row in widjetCtrl.features | limitTo:3">
+                    <a href="#/detail/{{row.id}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>
+                        <div class="section-upper__image--wrapper"><img
+                                ng-src="{{row.thumb}}" alt="{{row.subject}}"/></div>
+                        <h4>{{row.subject}}</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row section-below">
+            <a href="#/detail/{{row.id}}" class="section-below__image--wrapper" ng-click='page.postUrlToParent("#/detail/"+ row.id)' ng-repeat="row in widjetCtrl.features | limitTo:-1"><img
+                    ng-src="{{row.thumb}}" alt="{{row.subject}}"/></a>
+            <ol class="section-below__wrapper">
+                <li class="section-below__article" ng-repeat="row in widjetCtrl.features | limitTo:-1"><a href="#/detail/{{row.id}}" title="{{row.subject}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>{{row.subject}}</a></li>
+                <li class="section-below__article" ng-repeat="row in widjetCtrl.issues | limitTo:4"><a href="#/detail/{{row.id}}" title="{{row.subject}}" ng-click='page.postUrlToParent("#/detail/"+ row.id)'>{{row.subject}}</a></li>
+            </ol>
+        </div>
+
+    </div><!-- container -->
+
+    <!-- Javascript Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular-route.min.js" type="text/javascript"></script>
+    <!-- Javascript Modules -->
+    <script src="scripts/app.module.js" type="text/javascript"></script>
+    <script src="scripts/app.widjet.config.js" type="text/javascript"></script>
+    <script src="scripts/services/mainFeatureFactory.js" type="text/javascript"></script>
+    <script src="scripts/services/issueFactory.js" type="text/javascript"></script>
+    <script src="scripts/services/reviewFactory.js" type="text/javascript"></script>
+    <script src="scripts/services/favoriteFactory.js" type="text/javascript"></script>
+    <script src="scripts/services/sectionListFactory.js" type="text/javascript"></script>
+    <script src="scripts/controllers/mainController.js" type="text/javascript"></script>
+    <script src="scripts/controllers/favoriteController.js" type="text/javascript"></script>
+    <script src="scripts/controllers/widjetController.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div style="margin-bottom:10px;">
+    <h3 style="color:blue;font-weight:bold;">{{ detailCtrl.data.sectionname }}</h3>
+</div>
+
+<div class="articleTitle">
+    <h1>{{ detailCtrl.data.subject }}</h1>
+    <p>{{ detailCtrl.data.writer }}<span class="right" style="color:blue;">{{ detailCtrl.data.date }}</span></p>
+</div>
+
+<div class="contentArea">
+    <div ng-bind-html="renderHtml(detailCtrl.data.content)"></div>
+    <p class="right font-size12">{{ detailCtrl.data.writer }}</p>
+</div>
+<!-- //카테고리 -->
+<!---VOD Small---->
+<div class="thumBox relative-articles">
+    <article>
+        <h3>관련기사</h3>
+        <a href="#/detail/{{ row.id }}" class="thumbnail thumbnail-small" ng-repeat="row in detailCtrl.data.relatedArticlelist | limitTo:4">
+            <!-- <img src="{{ row.thumb }}" alt="{{ row.subject }}"> -->
+            <h4 class="thumbnail-caption">{{ row.subject }}</h4>
+        </a>
+    </article>
+</div>
+<!---//VOD Small---->
+
+

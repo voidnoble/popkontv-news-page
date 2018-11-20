@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>팝콘TV</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <link rel="shortcut icon" href="http://www.yourdomain.com/image2006/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://27.102.93.203:9001/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="http://27.102.93.203:9001/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="http://27.102.93.203:9001/js/plugin/tip-yellowsimple/tip-yellowsimple.css" />
+    <link rel="stylesheet" type="text/css" href="http://27.102.93.203:9001/js/plugin/tip-twitter/tip-twitter.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://27.102.93.203:9001/css/liScroll.css" />
+</head>
+<body>
+	<!-- wrapper -->
+	<div id="wrapper">
+		<!-- container -->
+		<div id="container">
+			<!-- 메인 작업영역 -->
+			<div id="content_full">
+
+
+
+
+
+
+
+				<!-- news -->
+				<div id="news">
+					<ul class="tabs1">
+						<span class="mL20" style="font-weight:800; font-size:14px; line-height:40px;">자동차</span>
+						<span class="fc_gray fn"> / car </span>
+						<ul class="tabli">
+							<li><a href="#tab11">최신기사</a></li>
+							<li><a href="#tab12">신차</a></li>
+							<li><a href="#tab14">업계/정책</a></li>
+							<li><a href="#tab13">시승기/리뷰</a></li>
+							<li><a href="#tab15">칼럼/분석</a></li>
+							<li><a href="#tab16">라이프</a></li>
+							<li><a href="#tab17">결함/분석</a></li>
+							<li><a href="#tab18">회사쇼</a></li>
+						</ul>
+					</ul>
+
+					<div class="tab_container1">
+						<div id="tab11" class="tab_content1">
+							<ul class="news1">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news2">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news3">
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<div class="clear"></div>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+							</ul>
+						</div>
+						<div id="tab12" class="tab_content1">
+						   <ul class="news1">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news2">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news3">
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<div class="clear"></div>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+							</ul>
+						</div>
+						<div id="tab13" class="tab_content1">
+						   <ul class="news1">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news2">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news3">
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<div class="clear"></div>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+							</ul>
+						</div>
+						<div id="tab14" class="tab_content1">
+						   <ul class="news1">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news2">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news3">
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<div class="clear"></div>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+							</ul>
+						</div>
+						<div id="tab15" class="tab_content1">
+						   <ul class="news1">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news2">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news3">
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<div class="clear"></div>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+							</ul>
+						</div>
+						<div id="tab16" class="tab_content1">
+						   <ul class="news1">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news2">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news3">
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<div class="clear"></div>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+							</ul>
+						</div>
+						<div id="tab17" class="tab_content1">
+						   <ul class="news1">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news2">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news3">
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<div class="clear"></div>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+							</ul>
+						</div>
+						<div id="tab18" class="tab_content1">
+						   <ul class="news1">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news2">
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+								<div class="clear"></div>
+								<li ng-repeat="row in record.row">
+									<a href="{{row.url}}">
+									<img src="{{row.thumb}}">
+										<div class="n2">
+											<span class="fb">{{row.subject}}</span><br>
+											<span class="fc_gray fn crop">{{row.content}}</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="news3">
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<div class="clear"></div>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+								<li style="padding-bottom:10px;" ng-repeat="row in record.row">
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+									<p><a href="{{row.url}}">{{row.subject}}</a></p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //news -->
+
+
+
+
+
+
+			</div>
+			<!-- //content -->
+		</div>
+		<!-- //container -->
+		<!-- Footer -->
+	</div>
+	<!-- //Footer -->
+	</div>
+	<!-- //wrapper -->
+</body>
+</html>
+
+
